@@ -1,0 +1,17 @@
+{
+  "name": "apigithub__way",
+  "version": "0.0.0",
+  "homepage": "\"\"",
+  "authors": [
+    "Yoseph Santos <yosephcsantos@gmail.com>"
+  ],
+  "description": "GitHub api",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
