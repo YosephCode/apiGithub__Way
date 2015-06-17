@@ -1,0 +1,11 @@
+{
+	"favorites" : [ 
+		{   
+			"nameRepository" : null,
+			"description" : null,
+			"updateDate" : null,
+			"owner" : null,
+			"contributors" : null
+		}
+	]  
+}

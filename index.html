@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<!-- Meta tags -->
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	
+	<!-- Title -->
+	<title>Api Github</title>
+
+	<!-- CSS links -->
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+<body>
+	<section class="container" ng-app="App">
+		<article ng-controller="mainController">
+			<div ng-class="{true:'div__gitUsername--disabled', false:'div__gitUsername'}[page]" class="">
+				<label>GitHub username:</label>
+				<input type="text" ng-disabled="page" placeholder="Pesquise o nome do usuário" class="form-control" ng-model="username">
+			</div>
+			<a ng-if="favorites.length > 0" href="/#/repositorios/favoritos" class="btn btn-success btn-favorite">Meus Favoritos</a>
+			<!-- Dynamic content -->
+			<article ng-view></article>
+		
+		</article>
+	</section>
+
+	<!-- Scripts -->
+	<script src="bower_components/angular/angular.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

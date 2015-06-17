@@ -1,0 +1,19 @@
+<section class="section__repository">
+	<a href="/#/" ng-click="statusPage()" class="btn btn-primary btn-sm btn-back">
+		<div class="inline-block arrow-left"></div>
+		<div class="inline-block">voltar para perfil</div>
+	</a>
+	<article>
+		<h4>Repositórios Favoritos: </h4>
+		<ul class="list-group">
+			<li class="list-group-item" ng-repeat="f in favorites">
+				<span>Nome do repositório: </span>{{f.name}}, <br>
+				<span>Dono: </span> {{f.owner.login}}, <br>
+				<a href="{{f.owner.html_url}}" target="_blank">Acesse o repositório</a> 
+			</li>
+	    </ul>
+	</article>
+</section>
+
+
+

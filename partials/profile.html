@@ -1,0 +1,35 @@
+<section ng-show="users" class="section__profile">
+	
+	<!-- User information-->
+	<article class="article__info--profile" ng-model="users">
+		<div data-title="Imagem" class="div__img">
+	        <img width="110" height="110" ng-src="{{users.avatar_url}}">
+	    </div>
+	    <div class="div__info">
+	    	<span>{{users.login}}</span>
+	    	<span class="span__info">Seguidores: {{users.followers}}</span>
+	    	<span class="span__info">Seguindo: {{users.following}}</span>
+	    	<span class="span__info">Repositórios: {{users.public_repos}}</span>
+	    </div>
+	</article>
+
+	<!-- Repository information-->
+	<article class="article__search">
+		<label for="">Buscar repositório:</label>
+		<input type="text" class="form-control" ng-model="searching.name" />
+	</article>
+	<table ng-table="tableParams" class="container table table-striped" ng-cloak>	    
+	    <thead>
+	        <tr>
+	            <th>Meus repositórios</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr ng-repeat="rp in repositories | filter:searching" ng-cloak>
+	            <td data-title="Repository" class="td__modelo">
+	                <a href="/#/repositorio/detalhes" ng-click="dataRepository(rp)"><span>{{rp.name}}</span></a>
+	            </td>
+	        </tr>
+	    </tbody>
+	</table>
+</section>

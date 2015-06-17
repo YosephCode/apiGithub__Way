@@ -1,0 +1,36 @@
+<section class="section__repository">
+	<button ng-click="addFavorites(repositoryDetails)" class="btn btn-default">
+		<span class="{{repositoryDetails.statusFavorite}} favorite"></span>
+		<span>Adicionar como favorito</span>
+	</button>
+	<h1>
+		<strong>{{repositoryDetails.name}}</strong>
+	</h1>
+	<article>
+		<label>Descrição: </label>
+		<span>{{repositoryDetails.description}}</span><br><br>
+		
+		<label>Linguagem: </label>
+		<span>{{repositoryDetails.language}}</span><br>
+		
+		<label>Última atualização: </label>
+		<span>{{repositoryDetails.updated_at}}</span><br>
+		
+		<label>Dono do repositório: </label>
+		<span>{{repositoryDetails.owner.login}}</span><br>
+	</article>	
+	<a href="/#/" ng-click="statusPage()" class="btn btn-primary btn-sm btn-back">
+		<div class="inline-block arrow-left"></div>
+		<div class="inline-block">voltar para perfil</div>
+	</a>
+	<br>
+	<article>
+		<h4>Contribuidores: </h4>
+		<ul class="list-group">
+	        <li class="list-group-item" ng-repeat="ct in contributors">{{ct.login}}</li>
+	    </ul>
+	</article>
+</section>
+
+
+
