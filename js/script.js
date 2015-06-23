@@ -52,9 +52,9 @@ var app = angular.module('App',['Services', 'ngRoute']);
 //Config - Single Page Application
 app.config(function($routeProvider){
 	$routeProvider
-	.when('/', {templateUrl:'../partials/profile.html'})
-	.when('/repositorio/detalhes', {templateUrl:'../partials/repository.html', controller:'repositoryController'})
-	.when('/repositorios/favoritos', {templateUrl:'../partials/favoriteRepositories.html',  controller:'favoriteRepositoryController' })
+	.when('/', {templateUrl:'partials/profile.html'})
+	.when('/repositorio/detalhes', {templateUrl:'partials/repository.html', controller:'repositoryController'})
+	.when('/repositorios/favoritos', {templateUrl:'partials/favoriteRepositories.html',  controller:'favoriteRepositoryController' })
 	.otherwise({redirectTo:'/'})
 });
 
